@@ -29,7 +29,7 @@ So far the working title is *"The Haunted Cinema"*.
 * Python 3.8+ *(Currently being developed on latest, 3.11.8. No idea if >3.11.8 is supported/will run out of the box)*
 * Poetry
 * Postgresql
-* Docker/Docker Compse
+* Docker/Docker Compose
 
 Kind of a requirement, but should install when installing project:
 
