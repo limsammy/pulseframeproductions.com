@@ -45,5 +45,6 @@ The following are instructions on how to install, run, and deploy this project.
 
 1. Clone repo and cd into project `git clone git@github.com:limsammy/pulseframeproductions.com.git && cd pulseframeproductiojns.com`
 2. Create and activate new python virtual environment (Optional, highly recommended. I am using pyenv so instruction will assume same setup) `pyenv virtualenv pulseframeproductions.com && pyenv activate pulseframeproductions.com`
-3. Install all python dependencies with poetry `poetry <TODO: ADD CORRECT POETRY COMMAND HERE>`
-4. Idk yet, still WIP. *TODO: Work on and finish readme*
+3. Install Poetry with pip `pip install poetry`
+4. Install all python dependencies with poetry `poetry <TODO: ADD CORRECT POETRY COMMAND HERE>`
+5. Idk yet, still WIP. *TODO: Work on and finish readme*
