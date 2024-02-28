@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pulseframeproductions"
+name = "app"
 version = "0.0.1"
 description = "Source code for Pulse Frame Productions website/webapp"
 authors = ["Sam Lim <sam@typhonic.io>"]
@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.110.0"
-uvicorn = {extras = ["standard"], version = "^0.27.1"}
+uvicorn = { extras = ["standard"], version = "^0.27.1" }
 
 
 [build-system]
