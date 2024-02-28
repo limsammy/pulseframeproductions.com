@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pulseframeproductions"
-version = "0.1.0"
-description = ""
+version = "0.0.1"
+description = "Source code for Pulse Frame Productions website/webapp"
 authors = ["Sam Lim <sam@typhonic.io>"]
 readme = "README.md"
 
