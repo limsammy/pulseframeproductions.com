@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
 
 from app.utils.logger_utils import get_logger
 
@@ -15,4 +17,12 @@ def create_app() -> FastAPI:
         return {"message": "Hello World"}
 
     logger.debug("Returniing FastAPI app instance")
+    return app
+
+
+def configure_static_files(app: FastAPI) -> FastAPI:
+    static_dir_absolute = settings.APP_ROOT / "static"
+    static_dir = str(static_dir_absolute.relative_to(settings.PROJECT_ROOT))
+    app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
+
     return app
