@@ -3,6 +3,7 @@ from fastapi.staticfiles import StaticFiles
 
 
 from app.utils.logger_utils import get_logger
+from app.config import settings
 
 logger = get_logger(__name__)
 
