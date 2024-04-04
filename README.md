@@ -47,4 +47,5 @@ The following are instructions on how to install, run, and deploy this project.
 2. Create and activate new python virtual environment (Optional, highly recommended. I am using pyenv so instruction will assume same setup) `pyenv virtualenv pulseframeproductions.com && pyenv activate pulseframeproductions.com`
 3. Install Poetry with pip `pip install poetry`
 4. Install all python dependencies with poetry `poetry <TODO: ADD CORRECT POETRY COMMAND HERE>`
-5. Idk yet, still WIP. *TODO: Work on and finish readme*
+5. Populate `.env`
+6. For SECRET_KEY enter a python shell and use `import secrets; secrets.token_urlsafe(64)` to generate a secret key 64 characters long
