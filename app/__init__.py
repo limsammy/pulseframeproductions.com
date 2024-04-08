@@ -8,7 +8,7 @@ from app.config import settings
 logger = get_logger(__name__)
 
 
-def create_app() -> FastAPI:
+def create_app(title: str, description: str, version: str) -> FastAPI:
     """App Factory for creating and returning FastAPI app instance"""
     logger.debug("Creating FastAPI app instance")
     app = FastAPI(
