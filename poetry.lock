@@ -146,6 +146,20 @@ files = [
 ]
 
 [[package]]
+name = "jinja-partials"
+version = "0.2.0"
+description = "Simple reuse of partial HTML page templates in the Jinja template language for Python web frameworks."
+optional = false
+python-versions = "*"
+files = [
+    {file = "jinja_partials-0.2.0-py3-none-any.whl", hash = "sha256:a83ab16c02a03412eb6b5a49345900fb56ad666fad11d3be7fff09dbf9ecf8f3"},
+    {file = "jinja_partials-0.2.0.tar.gz", hash = "sha256:ada44c441fe175d0a5d5f594b5f4c3301a1d5974d212e83031fbd8886785dd69"},
+]
+
+[package.dependencies]
+jinja2 = "*"
+
+[[package]]
 name = "jinja2"
 version = "3.1.3"
 description = "A very fast and expressive template engine."
@@ -694,4 +708,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d09bfd8f681abbc68e7072fbff6ab28a29c88ef86b57e0ef7971e1c0d43a610b"
+content-hash = "640d6a7cb6130aad62424695f95f1286805b7960f82fc6f7abebe6e4eaf6309d"
