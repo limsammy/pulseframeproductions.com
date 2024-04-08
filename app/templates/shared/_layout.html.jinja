@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Page Title -->
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&family=Rajdhani:wght@700&display=swap"
+        rel="stylesheet" />
+    <!-- Template Config -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', path='/css/config.css') }}" />
+    <!-- Libraries -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', path='/css/libs.css') }}" />
+    <!-- Template Styles -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}" />
+    <!-- Responsive -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', path='/css/responsive.css') }}" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', path='/img/favicon.png') }}" sizes="32x32" />
+</head>
+
+<body>
+    <!-- Page Content -->
+    {% block content %}{% endblock content %}
+</body>
+
+{% include "shared/layouts/_js_scripts.html.jinja" %}
+
+</html>
