@@ -30,6 +30,7 @@ So far the working title is *"The Haunted Cinema"*.
 * Poetry
 * Postgresql
 * Docker/Docker Compose
+* Dotenv for local (Not using `python-dotenv`, but [dotenv](https://www.dotenv.org/docs) that includes support for dotenv-vault as well as multiple languages.)
 
 Kind of a requirement, but should install when installing project:
 
@@ -59,3 +60,4 @@ The following are instructions on how to install, run, and deploy this project.
 * Activate environment: `pyenv activate pulseframe`
 * List poetry packages, versions, and descriptions: `poetry show`
 * List environment variables `dotenv list`
+* More `dotenv` commands when we get around to using `dotenv vault` for logging in, CI/CD, etc.
