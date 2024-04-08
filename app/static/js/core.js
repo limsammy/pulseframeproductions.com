@@ -1021,7 +1021,7 @@ class Anita {
     // PhotoSwipe Lightbox
     if (jQuery(".anita-lightbox-link").length) {
       if (typeof PhotoSwipe !== "function") {
-        jQuery.getScript("js/lib/photoswipe.min.js").done(function () {
+        jQuery.getScript("static/js/lib/photoswipe.min.js").done(function () {
           if (_self.pswp) {
             _self.pswp.isReady = true;
           }
@@ -1952,7 +1952,7 @@ class Anita {
         });
       };
       if (typeof jQuery.fn.owlCarousel == "undefined") {
-        jQuery.getScript("js/lib/owl.carousel.min.js").done(function () {
+        jQuery.getScript("static/js/lib/owl.carousel.min.js").done(function () {
           anita_init_owl();
         });
       } else {
@@ -2013,7 +2013,7 @@ class Anita {
         });
       };
       if (typeof Anita_BrickWall !== "function") {
-        jQuery.getScript("js/anita-brickwall.js").done(function () {
+        jQuery.getScript("static/js/anita-brickwall.js").done(function () {
           anita_init_brickwall();
         });
       } else {
@@ -2052,7 +2052,7 @@ class Anita {
       };
       if (typeof jQuery.fn.justifiedGallery == "undefined") {
         jQuery
-          .getScript("js/lib/jquery.justifiedGallery.min.js")
+          .getScript("static/js/lib/jquery.justifiedGallery.min.js")
           .done(function () {
             anita_init_justified();
           });
@@ -2173,21 +2173,21 @@ class Anita {
     // GL Carousel
     if (jQuery(".anita-gl-carousel-gallery").length) {
       if (typeof Anita_GL_Carousel !== "function") {
-        jQuery.getScript("js/anita-gl-carousel.js");
+        jQuery.getScript("static/js/anita-gl-carousel.js");
       }
     }
 
     // Roll Carousel
     if (jQuery(".anita-gl-roll-gallery").length) {
       if (typeof Anita_GL_Roll !== "function") {
-        jQuery.getScript("js/anita-gl-roll.js");
+        jQuery.getScript("static/js/anita-gl-roll.js");
       }
     }
 
     // GL Sider
     if (jQuery(".anita-gl-slider-gallery").length) {
       if (typeof Anita_GL_Slider !== "function") {
-        jQuery.getScript("js/anita-gl-slider.js");
+        jQuery.getScript("static/js/anita-gl-slider.js");
       }
     }
 
@@ -2211,7 +2211,7 @@ class Anita {
         });
       };
       if (typeof Anita_Carousel !== "function") {
-        jQuery.getScript("js/anita-carousel.js").done(function () {
+        jQuery.getScript("static/js/anita-carousel.js").done(function () {
           anita_flat_carousel_init();
         });
       } else {
