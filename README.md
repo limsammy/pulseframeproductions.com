@@ -46,6 +46,16 @@ The following are instructions on how to install, run, and deploy this project.
 1. Clone repo and cd into project `git clone git@github.com:limsammy/pulseframeproductions.com.git && cd pulseframeproductiojns.com`
 2. Create and activate new python virtual environment (Optional, highly recommended. I am using pyenv so instruction will assume same setup) `pyenv virtualenv pulseframeproductions.com && pyenv activate pulseframeproductions.com`
 3. Install Poetry with pip `pip install poetry`
-4. Install all python dependencies with poetry `poetry <TODO: ADD CORRECT POETRY COMMAND HERE>`
-5. Populate `.env`
-6. For SECRET_KEY enter a python shell and use `import secrets; secrets.token_urlsafe(64)` to generate a secret key 64 characters long
+4. Install all python dependencies with poetry `poetry install`
+5. Validate environment and poetry packages `poetry check`
+6. Populate `.env` using example `cp .env.example .env`
+7. For SECRET_KEY enter a python shell and use `import secrets; secrets.token_urlsafe(64)` to generate a secret key 64 characters long. Copy and paste this into the SECRET_KEY environment var in `.env`
+8. Start the local server `uvicorn app.main:app --reload `
+   1. `--reload` flag automatically reloads the server if you edit files and save them while server is running. No need to `ctrl+c` restart
+
+## Helpful Commands
+
+* Create python virtual environment with name (using pyenv): `pyenv virtualenv pulseframe`
+* Activate environment: `pyenv activate pulseframe`
+* List poetry packages, versions, and descriptions: `poetry show`
+* List environment variables `dotenv list`
