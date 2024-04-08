@@ -29,9 +29,18 @@ def create_app(title: str, summary: str, description: str, version: str, debug: 
         # openapi_url="{}/openapi.json".format(settings.API_VERSION_STRING),
     )
 
-    ####################
-    # Register routers #
-    ####################
+    logger.info("Checking if app instance is valid...")
+    if app is None:
+        logger.error("App instance is None!")
+        raise ValueError("App instance is None!")
+        return
+
+    logger.info("Everything looks good. Returniing FastAPI app instance")
+    return app
+
+
+def configure_routers(app: FastAPI) -> FastAPI:
+    """Configure routers for FastAPI app instance. Import routers and include them in app instance."""
     logger.info("Registering API routers...")
     from app.routers import core
 
@@ -46,22 +55,11 @@ def create_app(title: str, summary: str, description: str, version: str, debug: 
     #     logger.info("Registered router: {}".format(router.prefix))
     # logger.info("Done registering routers!")
 
-    # @app.get("/")
-    # async def root():
-    #     return {"message":
-    # "Hello World"}
-
-    logger.info("Checking if app instance is valid...")
-    if app is None:
-        logger.error("App instance is None!")
-        raise ValueError("App instance is None!")
-        return
-
-    logger.info("Everything looks good. Returniing FastAPI app instance")
     return app
 
 
 def configure_static_files(app: FastAPI) -> FastAPI:
+    """Configure static files for FastAPI app instance. Establish directory and mount to path."""
     static_dir_absolute = settings.APP_ROOT / "static"
     static_dir = str(static_dir_absolute.relative_to(settings.PROJECT_ROOT))
     app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
