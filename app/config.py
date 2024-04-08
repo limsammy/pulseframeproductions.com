@@ -53,15 +53,23 @@ def _build_and_get_app_metadata() -> dict:
     logger.debug("Attempting to build dict from .env...")
     try:
         title: str = os.getenv("APP_TITLE")
+        summary: str = os.getenv("APP_SUMMARY")
         description: str = os.getenv("APP_DESC")
         version: str = os.getenv("APP_VERSION")
+        debug: str = os.getenv("DEBUG")
     except Exception as e:
         logger.error("Could not get vars from .env! Please check that the .env file exists and has APP METADATA vars")
         logger.exception(e)
 
     logger.debug("Successfully got env vars from .env file!")
 
-    app_metadata: dict = {"title": title, "description": description, "version": version}
+    app_metadata: dict = {
+        "title": title,
+        "summary": summary,
+        "description": description,
+        "version": version,
+        "debug": debug,
+    }
     logger.debug("App metadata dict built: {}".format(app_metadata))
 
     logger.info("Returning app_metadata dict!")
@@ -95,6 +103,7 @@ class BaseConfig:
 
 
 class DevelopmentConfig(BaseConfig):
+    DEBUG: bool = True
     pass
 
 
@@ -107,6 +116,7 @@ class ProductionConfig(BaseConfig):
 
 # Testing config not needed yet
 class TestingConfig(BaseConfig):
+    DEBUG: bool = True
     # DATABASE_URL: str = _build_and_get_database_url(db_instance="testing")
     pass
 
