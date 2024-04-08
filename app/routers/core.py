@@ -27,9 +27,8 @@ logger.info("Created Jinja2Templates instance!")
 
 
 @router.get("/", response_class=HTMLResponse)
-async def root(request: Request):
+async def index(request: Request):
     logger.info("Received GET request to /")
-    #     return {"message": "Hello World"}
+    logger.debug("Rendering index template...")
 
-    # logger.debug("Returniing FastAPI app instance"
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(request=request, name="index.html.jinja", context={"title": "Home"})
