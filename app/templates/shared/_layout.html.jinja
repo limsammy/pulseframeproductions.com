@@ -30,6 +30,6 @@
     {% block content %}{% endblock content %}
 </body>
 
-{% include "shared/layouts/_js_scripts.html.jinja" %}
+{{ render_partial("shared/partials/_js.html.jinja ")}}
 
 </html>
