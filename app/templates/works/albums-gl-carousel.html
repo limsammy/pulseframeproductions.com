@@ -1,0 +1,98 @@
+{% extends "shared/_layout.html.jinja" %}
+{% block title %}{{ title }}{% endblock %}
+{# <title>Anita | Works: Roll Carousel</title> #}
+
+{% block content %}
+
+    <!-- Header -->
+    <header id="anita-header" class="anita-header">
+        <div class="anita-header-inner">
+            <div class="anita-logo-wrapper">
+                <!-- Logo -->
+                <a href="index.html" class="anita-logo is-retina">
+                    <img src="img/logo.png" alt="Anita Photography" width="192" height="80">
+                </a>
+            </div>
+            <div class="anita-menu-wrapper">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="anita-menu-toggler">
+                    <i class="anita-menu-toggler-icon"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div class="anita-fullscreen-menu-wrap">
+        <nav class="anita-nav anita-js-menu"></nav>
+    </div>
+
+    <!-- Page Main -->
+    <main class="anita-main">
+
+        <!-- WebGL Carousel Gallery -->
+        <div class="anita-gl-container-wrap anita-gl-carousel-gallery-wrap anita-scrollEW">
+            <!-- Album Title -->
+            <div class="anita-fixed-album-title">
+                <div class="anita-album-title">
+                    <div class="anita-albums-back-wrap" data-aos="fade-up">
+                        <a href="#" class="anita-albums-back">Back to Listing</a>
+                    </div>
+                    <h1 class="anita-page-title" data-aos="fade-up" data-aos-delay="50">Green Turban</h1>
+                    <div class="anita-post-meta anita-meta" data-aos="fade-up" data-aos-delay="100" data-aos-offset="20">
+                        <span>Portraits</span>
+                        <span>10 Photos</span>
+                    </div>
+                </div><!-- .anita-album-title -->
+            </div><!-- .anita-fixed-album-title -->
+
+            <!-- Album Gallery -->
+    		<div class="anita-gl-container anita-gl-carousel-gallery" data-prev-label="Previous Photo" data-next-label="Next Photo">
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/01.jpg" data-size="1440x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/02.jpg" data-size="800x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/03.jpg" data-size="1440x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/04.jpg" data-size="800x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/05.jpg" data-size="1440x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/06.jpg" data-size="800x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/07.jpg" data-size="1440x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/08.jpg" data-size="800x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/09.jpg" data-size="1440x1080"></div>
+                <div class="anita-gl-gallery-item" data-src="img/albums/album01/10.jpg" data-size="800x1080"></div>
+    		</div><!-- .anita-gl-carousel-gallery -->
+
+            <!-- Post Navigation -->
+            <div class="anita-album-nav-prev" data-aos="fade-right" data-aos-delay="500">
+                <a href="albums-carousel.html" class="anita-prev-album-link">
+                    <div class="anita-data-background" data-src="img/albums/covers_512/album18.jpg"></div>
+                    <span>
+                        Prev Album
+                        <span class="anita-prev-album-title">Bright Life Colors</span>
+                    </span>
+                </a>
+            </div>
+            <div class="anita-album-nav-next" data-aos="fade-left" data-aos-delay="500">
+                <a href="albums-masonry-2col.html" class="anita-next-album-link">
+                    <div class="anita-data-background" data-src="img/albums/covers_512/album02.jpg"></div>
+                    <span>
+                        Next Album
+                        <span class="anita-prev-album-title">Golden Feelings</span>
+                    </span>
+                </a>
+            </div>
+    	</div><!-- .anita-gl-carousel-gallery-wrap -->
+	</main>
+
+    <!-- Footer -->
+    <footer id="anita-footer">
+        <div class="anita-footer-inner">
+            <div class="anita-copyright anita-js-copyright"></div>
+            <div class="anita-socials anita-js-socials"></div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/aos.min.js"></script>
+    <script src="js/core.js"></script>
+</body>
+</html>
