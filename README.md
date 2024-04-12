@@ -53,25 +53,13 @@ psql                                                                            
 psql (16.2 (Postgres.app))
 Type "help" for help.
 
-sam=# CREATE DATABASE pulse_dev;
-CREATE DATABASE
-sam=# DROP DATABASE pulse_dev;
-DROP DATABASE
 sam=# CREATE USER pulse_dev;
 CREATE ROLE
-sam=# ALTER USER pulse_dev WITH ENCRYPTED PASSWORD "hacktheplanet!!!";
-ERROR:  syntax error at or near ""hacktheplanet!!!""
-LINE 1: ALTER USER pulse_dev WITH ENCRYPTED PASSWORD "hacktheplanet!...
-                                                     ^
 sam=# CREATE USER sammy WITH PASSWORD 'password';
 sam=# ALTER USER pulse_dev WITH ENCRYPTED PASSWORD 'hacktheplanet!!!';
 ALTER ROLE
 sam=# CREATE DATABASE pulseframeproductions_dev;
 CREATE DATABASE
-sam=# GRANT ALL PRIVELAGES ON DATABASE pulseframeproductions_dev TO pulse_dev;
-ERROR:  syntax error at or near "PRIVELAGES"
-LINE 1: GRANT ALL PRIVELAGES ON DATABASE pulseframeproductions_dev T...
-                  ^
 sam=# GRANT ALL PRIVILEGES ON DATABASE pulseframeproductions_dev  TO pulse_dev;
 GRANT
 sam=# \l
@@ -90,7 +78,7 @@ sam=# \l
 (5 rows)
 
 sam=# \q
-```
+```g
 
 ### Running (local, without Docker)
 
