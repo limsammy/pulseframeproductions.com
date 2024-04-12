@@ -60,7 +60,7 @@ sam=# ALTER USER pulse_dev WITH ENCRYPTED PASSWORD 'hacktheplanet!!!';
 ALTER ROLE
 sam=# CREATE DATABASE pulseframeproductions_dev;
 CREATE DATABASE
-sam=# GRANT ALL PRIVILEGES ON DATABASE pulseframeproductions_dev  TO pulse_dev;
+sam=# GRANT ALL PRIVILEGES ON DATABASE gpulseframeproductions_dev  TO pulse_dev;
 GRANT
 sam=# \l
                                                                List of databases
@@ -89,7 +89,7 @@ sam=# \q
 5. Validate environment and poetry packages `poetry check`
 6. Populate `.env` using example `cp .env.example .env`
 7. For SECRET_KEY enter a python shell and use `import secrets; secrets.token_urlsafe(64)` to generate a secret key 64 characters long. Copy and paste this into the SECRET_KEY environment var in `.env`
-8. Start the local server `uvicorn app.main:app --reload `
+8. Start the local server `uvicorn app.main:app --reload`
    1. `--reload` flag automatically reloads the server if you edit files and save them while server is running. No need to `ctrl+c` restart
 
 ## Helpful Commands
