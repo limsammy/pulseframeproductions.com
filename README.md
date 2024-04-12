@@ -1,4 +1,4 @@
-# Pulse Frame Productions FastAPI Web Application
+s# Pulse Frame Productions FastAPI Web Application
 
 *Source code for [pulseframeproductions.com](pulseframeproductions.com)*
 
@@ -41,6 +41,56 @@ Kind of a requirement, but should install when installing project:
 ## Getting started
 
 The following are instructions on how to install, run, and deploy this project.
+
+### Creating Postgres DB
+
+Assuming you are on a Mac, or if you're not, that you're able to configure a Postgres database. Install Postgres.app, add the CLI tools to your PATH, and create new Postgres databases and users for this project.
+
+Here's my shell:
+
+```shell
+psql                                                                                                       Py pulseframeproductions 3.12.3 08:08:28 PM
+psql (16.2 (Postgres.app))
+Type "help" for help.
+
+sam=# CREATE DATABASE pulse_dev;
+CREATE DATABASE
+sam=# DROP DATABASE pulse_dev;
+DROP DATABASE
+sam=# CREATE USER pulse_dev;
+CREATE ROLE
+sam=# ALTER USER pulse_dev WITH ENCRYPTED PASSWORD "hacktheplanet!!!";
+ERROR:  syntax error at or near ""hacktheplanet!!!""
+LINE 1: ALTER USER pulse_dev WITH ENCRYPTED PASSWORD "hacktheplanet!...
+                                                     ^
+sam=# CREATE USER sammy WITH PASSWORD 'password';
+sam=# ALTER USER pulse_dev WITH ENCRYPTED PASSWORD 'hacktheplanet!!!';
+ALTER ROLE
+sam=# CREATE DATABASE pulseframeproductions_dev;
+CREATE DATABASE
+sam=# GRANT ALL PRIVELAGES ON DATABASE pulseframeproductions_dev TO pulse_dev;
+ERROR:  syntax error at or near "PRIVELAGES"
+LINE 1: GRANT ALL PRIVELAGES ON DATABASE pulseframeproductions_dev T...
+                  ^
+sam=# GRANT ALL PRIVILEGES ON DATABASE pulseframeproductions_dev  TO pulse_dev;
+GRANT
+sam=# \l
+                                                               List of databases
+           Name            |  Owner   | Encoding | Locale Provider |   Collate   |    Ctype    | ICU Locale | ICU Rules |   Access privileges   
+---------------------------+----------+----------+-----------------+-------------+-------------+------------+-----------+-----------------------
+ postgres                  | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | 
+ pulseframeproductions_dev | sam      | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | =Tc/sam              +
+                           |          |          |                 |             |             |            |           | sam=CTc/sam          +
+                           |          |          |                 |             |             |            |           | pulse_dev=CTc/sam
+ sam                       | sam      | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | 
+ template0                 | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | =c/postgres          +
+                           |          |          |                 |             |             |            |           | postgres=CTc/postgres
+ template1                 | postgres | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |            |           | =c/postgres          +
+                           |          |          |                 |             |             |            |           | postgres=CTc/postgres
+(5 rows)
+
+sam=# \q
+```
 
 ### Running (local, without Docker)
 
