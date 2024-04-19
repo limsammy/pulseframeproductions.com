@@ -99,3 +99,7 @@ sam=# \q
 * List poetry packages, versions, and descriptions: `poetry show`
 * List environment variables `dotenv list`
 * More `dotenv` commands when we get around to using `dotenv vault` for logging in, CI/CD, etc.
+
+## Important things to note
+
+* As of right now, we are embracing the monolothic vs. microservice race war. But to work with colleagues (colleagues can even be an altered state. For a) a fullstack backend/frontend should be implemented. Frontend should live in a React app, and backend should be this FastAPI app. The React app should be able to run independently of the FastAPI app, but should be able to communicate with it. FastAPI routers should serve the React app's functionality, and the React app should be able to make requests to the FastAPI app. This is the best way to work with a team, and the best way to work with yourself. It's also the best way to work with a team of yourselfs. It's the best way to work. Period.
